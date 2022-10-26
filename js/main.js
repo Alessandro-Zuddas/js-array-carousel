@@ -44,33 +44,37 @@ nextButton.addEventListener("click", function(){
 
 previousButton.addEventListener("click", function(){
 
+    if(currentIndex === -1){
+        currentIndex = 4;
+    }
+
     if(currentIndex === 0){
-        currentIndex = 4
         imgOne.classList.remove("active");
         imgFive.classList.add("active");
+        currentIndex--;
     }
 
     if(currentIndex === 1){
-        currentIndex = 0;
         imgTwo.classList.remove("active");
         imgOne.classList.add("active");
+        currentIndex--;
     }
 
     if(currentIndex === 2){
-        currentIndex = 1;
         imgThree.classList.remove("active");
         imgTwo.classList.add("active");
+        currentIndex--;
     }
 
     if(currentIndex === 3){
-        currentIndex = 2;
         imgFour.classList.remove("active");
         imgThree.classList.add("active");
+        currentIndex--;
     }
 
     if(currentIndex === 4){
-        currentIndex = 3;
         imgFive.classList.remove("active");
         imgFour.classList.add("active");
+        currentIndex--;
     }
 });
